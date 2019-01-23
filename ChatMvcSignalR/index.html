@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <script src="Scripts/jquery-1.6.4.min.js"></script>
+    <script src="Scripts/jquery.signalR-2.2.2.min.js"></script>
+    <script src="/SignalR/hubs"></script>
+    <script src="Scripts/serverClientConnection.js"></script>
+    <link href="StyleSheet.css" rel="stylesheet" />
+    <title></title>
+</head>
+<body>
+    <div class="container">
+        <div class="login">
+            <label>Användarnamn:</label><input id="userName" type="text" />
+            <label>Lösenord:</label><input id="Password" type="password" /><br />
+            <button onclick="setUsernameAndPass()">Logga In</button><br />
+            <span id="error"></span>
+
+        </div>
+
+        <div id="chatwindow" class="chat">
+            <ul id="msgs"></ul>
+        </div>
+        <div class="users">
+            <ul id="userlist"></ul>
+        </div>
+        <div class="textbox">
+            <br /><input id="textu" type="text" />
+            <button onclick="ButtonClick()">Send</button><br/>
+            <label id="who">Send To:</label>
+            <select id="sendTo">
+                <option value="all">All</option>
+            </select> 
+
+        </div>
+       
+    </div>
+</body>
+</html>
